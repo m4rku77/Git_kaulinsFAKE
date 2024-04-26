@@ -1,34 +1,25 @@
-import java.util.Random;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Kaulins {
-<<<<<<< HEAD
-
-	public static void main(String[] args) {
-		int skaitlis, reizes;
-=======
 	
-	static void mestKaulinu() {
-		int skaitlis;
->>>>>>> idejuZars
+	static void mestKaulinu(int reizes) {
 		Random rand = new Random();
+		
+		for(int i = 0; i < reizes; i++) {
+			int skaitlis = rand.nextInt(6) + 1;
+			System.out.println("Uzkrita skaitlis: " + skaitlis);
+		}
+	}
+	
+	public static void main(String[] args) {
+		int reizes;
 		Scanner scan = new Scanner(System.in);
+		do {
 		System.out.println("Cik reizes mest kauliņu?");
 		reizes = scan.nextInt();
-		
-		for(int i=0; i<reizes; i++) {
-		skaitlis = rand.nextInt(6)+1;
-<<<<<<< HEAD
-		System.out.println("Uzkrita skaitlis: "+skaitlis);
-=======
-		System.out.print("Uzkrita skaitlis: "+skaitlis);
-	}
-
-	public static void main(String[] args) {
-		mestKaulinu();
->>>>>>> idejuZars
-
-	}
+		}while(reizes<1);
+		mestKaulinu(reizes);
 		scan.close();
-}
+	}
 }
